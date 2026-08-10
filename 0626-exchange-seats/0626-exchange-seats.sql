@@ -1,4 +1,4 @@
-SELECT s1.id,
+SELECT s1.new_id AS id,
        s2.student
 FROM (
     SELECT s.id,
@@ -19,5 +19,5 @@ FROM (
     FROM Seat s
 ) s1
 JOIN Seat s2
-    ON s1.new_id = s2.id
-ORDER BY s1.id;
+    ON s1.id = s2.id
+ORDER BY s1.new_id;
